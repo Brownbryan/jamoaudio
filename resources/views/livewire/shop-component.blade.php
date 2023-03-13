@@ -7,7 +7,7 @@
 			<div class="wrap-breadcrumb">
 				<ul>
 					<li class="item-link"><a href="#" class="link">home</a></li>
-					<li class="item-link"><span>Digital & Electronics</span></li>
+					<li class="item-link"><span>Piano</span></li>
 				</ul>
 			</div>
 			<div class="row">
@@ -15,14 +15,14 @@
 				<div class="col-lg-9 col-md-8 col-sm-8 col-xs-12 main-content-area">
 
 					<div class="banner-shop">
-						<a href="#" class="banner-link">
+						<a href="/shop" class="banner-link">
 							<figure><img src="{{ asset ('assets/images/shop-banner.jpg')}}" alt=""></figure>
 						</a>
 					</div>
 
 					<div class="wrap-shop-control">
 
-						<h1 class="shop-title">Digital & Electronics</h1>
+						<h1 class="shop-title">Piano</h1>
 
 						<div class="wrap-right">
 
@@ -64,13 +64,13 @@
 
 							<li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
 								<div class="product product-style-3 equal-elem ">
-									<div class="product-thumnail">
+									<div class="product-thumnail">Grand Piano
 										<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
 											<figure><img src="{{ asset ('assets/images/products/digital_20.jpg')}}" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
 										</a>
 									</div>
 									<div class="product-info">
-										<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker [White]</span></a>
+										<a href="#" class="product-name"><span>Upright Piano</span></a>
 										<div class="wrap-price"><span class="product-price">$250.00</span></div>
 										<a href="#" class="btn add-to-cart">Add To Cart</a>
 									</div>
@@ -84,7 +84,7 @@
 										</a>
 									</div>
 									<div class="product-info">
-										<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker [White]</span></a>
+										<a href="#" class="product-name"><span>Digital Piano</span></a>
 										<div class="wrap-price"><span class="product-price">$250.00</span></div>
 										<a href="#" class="btn add-to-cart">Add To Cart</a>
 									</div>
@@ -98,7 +98,7 @@
 										</a>
 									</div>
 									<div class="product-info">
-										<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker [White]</span></a>
+										<a href="#" class="product-name"><span>Digital Piano</span></a>
 										<div class="wrap-price"><span class="product-price">$250.00</span></div>
 										<a href="#" class="btn add-to-cart">Add To Cart</a>
 									</div>
@@ -252,46 +252,54 @@
 						<div class="widget-content">
 							<ul class="list-category">
 								<li class="category-item has-child-cate">
-									<a href="#" class="cate-link">Fashion & Accessories</a>
+									<a href="#" class="cate-link">Quitars</a>
 									<span class="toggle-control">+</span>
 									<ul class="sub-cate">
-										<li class="category-item"><a href="#" class="cate-link">Batteries (22)</a></li>
-										<li class="category-item"><a href="#" class="cate-link">Headsets (16)</a></li>
-										<li class="category-item"><a href="#" class="cate-link">Screen (28)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Acoustic Guitars (22)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Semi Acoustic Guitars (16)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Classical Guitars(28)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Trans Acoustic Guitar (16)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Electric Guitars(28)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Bass Guitar(28)</a></li>
 									</ul>
 								</li>
 								<li class="category-item has-child-cate">
-									<a href="#" class="cate-link">Furnitures & Home Decors</a>
+									<a href="#" class="cate-link">Keyboards</a>
 									<span class="toggle-control">+</span>
 									<ul class="sub-cate">
-										<li class="category-item"><a href="#" class="cate-link">Batteries (22)</a></li>
-										<li class="category-item"><a href="#" class="cate-link">Headsets (16)</a></li>
-										<li class="category-item"><a href="#" class="cate-link">Screen (28)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Arranger
+											Workstation (22)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Synthesizers (16)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Midi Keyboard (28)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Portable Keyboard< (16)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Piaggero (28)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Keyboard Stand (16)</a></li>
 									</ul>
 								</li>
 								<li class="category-item has-child-cate">
-									<a href="#" class="cate-link">Digital & Electronics</a>
+									<a href="#" class="cate-link">Piano</a>
 									<span class="toggle-control">+</span>
 									<ul class="sub-cate">
-										<li class="category-item"><a href="#" class="cate-link">Batteries (22)</a></li>
-										<li class="category-item"><a href="#" class="cate-link">Headsets (16)</a></li>
-										<li class="category-item"><a href="#" class="cate-link">Screen (28)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Grand Piano(22)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Upright Piano (16)</a></li>
+										<li class="category-item"><a href="#" class="cate-link">Digital Piano (28)</a></li>
+
 									</ul>
 								</li>
 								<li class="category-item">
-									<a href="#" class="cate-link">Tools & Equipments</a>
+									<a href="#" class="cate-link">Dj Equipments</a>
 								</li>
 								<li class="category-item">
-									<a href="#" class="cate-link">Kid’s Toys</a>
+									<a href="#" class="cate-link">Pa Equipment</a>
 								</li>
 								<li class="category-item">
-									<a href="#" class="cate-link">Organics & Spa</a>
+									<a href="#" class="cate-link">Drums</a>
 								</li>
 							</ul>
 						</div>
 					</div><!-- Categories widget-->
 
-					<div class="widget mercado-widget filter-widget brand-widget">
+					{{-- <div class="widget mercado-widget filter-widget brand-widget">
 						<h2 class="widget-title">Brand</h2>
 						<div class="widget-content">
 							<ul class="list-style vertical-list list-limited" data-show="6">
@@ -308,7 +316,7 @@
 								<li class="list-item"><a data-label='Show less<i class="fa fa-angle-up" aria-hidden="true"></i>' class="btn-control control-show-more" href="#">Show more<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
-					</div><!-- brand widget-->
+					</div><!-- brand widget--> --}}
 
 					<div class="widget mercado-widget filter-widget price-filter">
 						<h2 class="widget-title">Price</h2>
@@ -322,7 +330,7 @@
 						</div>
 					</div><!-- Price-->
 
-					<div class="widget mercado-widget filter-widget">
+					{{-- <div class="widget mercado-widget filter-widget">
 						<h2 class="widget-title">Color</h2>
 						<div class="widget-content">
 							<ul class="list-style vertical-list has-count-index">
@@ -334,8 +342,9 @@
 								<li class="list-item"><a class="filter-link " href="#">Pink <span>(29)</span></a></li>
 							</ul>
 						</div>
-					</div><!-- Color -->
-
+					</div> --}}
+					<!-- Color -->
+{{-- 
 					<div class="widget mercado-widget filter-widget">
 						<h2 class="widget-title">Size</h2>
 						<div class="widget-content">
@@ -349,7 +358,8 @@
 								<figure><img src="{{ asset ('assets/images/size-banner-widget.jpg')}}" width="270" height="331" alt=""></figure>
 							</div>
 						</div>
-					</div><!-- Size -->
+					</div> --}}
+					<!-- Size -->
 
 					<div class="widget mercado-widget widget-product">
 						<h2 class="widget-title">Popular Products</h2>
@@ -358,7 +368,7 @@
 								<li class="product-item">
 									<div class="product product-widget-style">
 										<div class="thumbnnail">
-											<a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
+											<a href="detail.html" title="">
 												<figure><img src="{{ asset ('assets/images/products/digital_01.jpg')}}" alt=""></figure>
 											</a>
 										</div>
