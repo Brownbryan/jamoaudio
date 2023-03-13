@@ -30,9 +30,9 @@ Route::get('/shop',ShopComponent::class);
 Route::get('/cart',CartComponent::class);
 Route::get('/checkout',CheckoutComponent::class);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('user.dashboard');
-})->name('dashboard');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//     return view('user.dashboard');
+// })->name('dashboard');
 
 // Route for Users page and Admins
 Route::middleware(['auth:sanctum',' verified'])->group(function(){
