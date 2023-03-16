@@ -6,7 +6,6 @@ use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
-use App\Http\Livewire\LogoutComponent;
 use Illuminate\Support\Facades\Route;
 
 /*

@@ -133,7 +133,7 @@
                         <div class="mid-section main-info-area">
 
                             <div class="wrap-logo-top left-section">
-                                <a href="/home" class="link-to-home"><img src="{{ 'assets/images/logo-top-1.png' }}"
+                                <a href="/" class="link-to-home"><img src="{{ 'assets/images/logo-top-1.png' }}"
                                         alt="mercado"></a>
                             </div>
 
