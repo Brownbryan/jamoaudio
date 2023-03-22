@@ -65,8 +65,8 @@
 							<li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
 								<div class="product product-style-3 equal-elem ">
 									<div class="product-thumnail">
-										<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
-											<figure><img src="{{ asset ('assets/images/products')}}/{{ $product->image }}" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+										<a href="detail.html" title="{{ $product->name }}">
+											<figure><img src="{{ asset ('assets/images/products')}}/{{ $product->image }}" alt="{{ $product->name }}"></figure>
 										</a>
 									</div>
 									<div class="product-info">
@@ -79,8 +79,8 @@
 							<li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
 								<div class="product product-style-3 equal-elem ">
 									<div class="product-thumnail">
-										<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
-											<figure><img src="{{ asset ('assets/images/products')}}/{{ $product->image }}" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+										<a href="detail.html" title="{{ $product->name }}">
+											<figure><img src="{{ asset ('assets/images/products')}}/{{ $product->image }}" alt="{{ $product->name }}"></figure>
 										</a>
 									</div>
 									<div class="product-info">
@@ -97,13 +97,14 @@
 					</div>
 
 					<div class="wrap-pagination-info">
-						<ul class="page-numbers">
+						{{ $products->links() }}
+						{{-- <ul class="page-numbers">
 							<li><span class="page-number-item current" >1</span></li>
 							<li><a class="page-number-item" href="#" >2</a></li>
 							<li><a class="page-number-item" href="#" >3</a></li>
 							<li><a class="page-number-item next-link" href="#" >Next</a></li>
 						</ul>
-						<p class="result-count">Showing 1-8 of 12 result</p>
+						<p class="result-count">Showing 1-8 of 12 result</p> --}}
 					</div>
 				</div><!--end main products area-->
 
