@@ -5,31 +5,40 @@
 
         <div class="wrap-breadcrumb">
             <ul>
-                <li class="item-link"><a href="#" class="link">home</a></li>
-                <li class="item-link"><span>login</span></li>
+                <li class="item-link"><a href="/" class="link">home</a></li>
+                <li class="item-link"><span>Cart</span></li>
             </ul>
         </div>
         <div class=" main-content-area">
 
             <div class="wrap-iten-in-cart">
+                @if(session()->has('success_message'))
+                    <div class="alert alert-success">
+                       <strong>Success</strong>
+                        {{ session()->get('success_message') }}
+                    </div> 
+                @endif
+                @if(Cart::count() > 0)
                 <h3 class="box-title">Products Name</h3>
                 <ul class="products-cart">
+                    @foreach (Cart::content() as $item)
+
                     <li class="pr-cart-item">
                         <div class="product-image">
-                            <figure><img src="{{ asset('assets/images/products/digital_18.jpg')}}" alt=""></figure>
+                            <figure><img src="{{ asset('assets/images/products')}}/{{ $item->model->image}}" alt="{{ $item->model->name }}"></figure>
                         </div>
                         <div class="product-name">
-                            <a class="link-to-product" href="#">Radiant-360 R6 Wireless Omnidirectional Speaker [White]</a>
+                            <a class="link-to-product" href="{{ route('product.details',['slug'=>$item->model->slug]) }}">{{ $item->model->name }}</a>
                         </div>
-                        <div class="price-field produtc-price"><p class="price">$256.00</p></div>
+                        <div class="price-field produtc-price"><p class="price">Ksh{{ $item->model->regular_price }}</p></div>
                         <div class="quantity">
                             <div class="quantity-input">
-                                <input type="text" name="product-quatity" value="1" data-max="120" pattern="[0-9]*" >									
-                                <a class="btn btn-increase" href="#"></a>
-                                <a class="btn btn-reduce" href="#"></a>
+                                <input type="text" name="product-quatity" value="{{ $item->quantity }}" data-max="120" pattern="[0-9]*" >									
+                                <a class="btn btn-increase" href="#" wire:click.prevent="addQuantity('{{ $item->rowId }}')"></a>
+                                <a class="btn btn-reduce" href="#" wire:click.prevent="reduceQuantity('{{ $item->rowId }}')"></a>
                             </div>
                         </div>
-                        <div class="price-field sub-total"><p class="price">$256.00</p></div>
+                        <div class="price-field sub-total"><p class="price">Ksh{{ $item->subtotal }}</p></div>
                         <div class="delete">
                             <a href="#" class="btn btn-delete" title="">
                                 <span>Delete from your cart</span>
@@ -37,45 +46,24 @@
                             </a>
                         </div>
                     </li>
-                    <li class="pr-cart-item">
-                        <div class="product-image">
-                            <figure><img src="{{ asset('assets/images/products/digital_20.jpg')}}" alt=""></figure>
-                        </div>
-                        <div class="product-name">
-                            <a class="link-to-product" href="#">Radiant-360 R6 Wireless Omnidirectional Speaker [White]</a>
-                        </div>
-                        <div class="price-field produtc-price"><p class="price">$256.00</p></div>
-                        <div class="quantity">
-                            <div class="quantity-input">
-                                <input type="text" name="product-quatity" value="1" data-max="120" pattern="[0-9]*">									
-                                <a class="btn btn-increase" href="#"></a>
-                                <a class="btn btn-reduce" href="#"></a>
-                            </div>
-                        </div>
-                        <div class="price-field sub-total"><p class="price">$256.00</p></div>
-                        <div class="delete">
-                            <a href="#" class="btn btn-delete" title="">
-                                <span>Delete from your cart</span>
-                                <i class="fa fa-times-circle" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </li>												
+                    	 @endforeach										
                 </ul>
+                @else
+                    <h3>No item in Cart</h3>
+                @endif
             </div>
 
             <div class="summary">
                 <div class="order-summary">
                     <h4 class="title-box">Order Summary</h4>
-                    <p class="summary-info"><span class="title">Subtotal</span><b class="index">$512.00</b></p>
+                    <p class="summary-info"><span class="title">Subtotal</span><b class="index">Ksh {{ Cart::subtotal() }}</b></p>
+                    <p class="summary-info"><span class="title">Tax</span><b class="index">Ksh {{ Cart::tax() }}</b></p>
                     <p class="summary-info"><span class="title">Shipping</span><b class="index">Free Shipping</b></p>
-                    <p class="summary-info total-info "><span class="title">Total</span><b class="index">$512.00</b></p>
+                    <p class="summary-info total-info "><span class="title">Total</span><b class="index">Ksh{{ Cart::total() }}</b></p>
                 </div>
                 <div class="checkout-info">
-                    <label class="checkbox-field">
-                        <input class="frm-input " name="have-code" id="have-code" value="" type="checkbox"><span>I have promo code</span>
-                    </label>
                     <a class="btn btn-checkout" href="checkout.html">Check out</a>
-                    <a class="link-to-shop" href="shop.html">Continue Shopping<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                    <a class="link-to-shop" href="/shop">Continue Shopping<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                 </div>
                 <div class="update-clear">
                     <a class="btn btn-clear" href="#">Clear Shopping Cart</a>
@@ -85,152 +73,33 @@
 
             <div class="wrap-show-advance-info-box style-1 box-in-site">
                 <h3 class="title-box">Most Viewed Products</h3>
+                
+                      
                 <div class="wrap-products">
+                    @foreach ($most_viewed as $m_product)
                     <div class="products slide-carousel owl-carousel style-nav-1 equal-container" data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"3"},"1200":{"items":"5"}}' >
 
                         <div class="product product-style-2 equal-elem ">
                             <div class="product-thumnail">
-                                <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
-                                    <figure><img src="{{ asset('assets/images/products/digital_04.jpg')}}" width="214" height="214" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+                                <a href="#" title="{{ $m_product->name }}">
+                                    <figure><img src="{{ asset('assets/images/products')}}/{{ $m_product->image }}" width="214" height="214" alt="{{ $m_product->name }}"></figure>
                                 </a>
                                 <div class="group-flash">
                                     <span class="flash-item new-label">new</span>
                                 </div>
                                 <div class="wrap-btn">
-                                    <a href="#" class="function-link">quick view</a>
+                                    <a href="{{ route('product.details',['slug'=>$m_product->slug])  }}" class="function-link">quick view</a>
                                 </div>
                             </div>
                             <div class="product-info">
-                                <a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker [White]</span></a>
-                                <div class="wrap-price"><span class="product-price">$250.00</span></div>
-                            </div>
-                        </div>
-
-                        <div class="product product-style-2 equal-elem ">
-                            <div class="product-thumnail">
-                                <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
-                                    <figure><img src="{{ asset('assets/images/products/digital_17.jpg')}}" width="214" height="214" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
-                                </a>
-                                <div class="group-flash">
-                                    <span class="flash-item sale-label">sale</span>
-                                </div>
-                                <div class="wrap-btn">
-                                    <a href="#" class="function-link">quick view</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker [White]</span></a>
-                                <div class="wrap-price"><ins><p class="product-price">$168.00</p></ins> <del><p class="product-price">$250.00</p></del></div>
-                            </div>
-                        </div>
-
-                        <div class="product product-style-2 equal-elem ">
-                            <div class="product-thumnail">
-                                <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
-                                    <figure><img src="{{ asset('assets/images/products/digital_15.jpg')}}" width="214" height="214" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
-                                </a>
-                                <div class="group-flash">
-                                    <span class="flash-item new-label">new</span>
-                                    <span class="flash-item sale-label">sale</span>
-                                </div>
-                                <div class="wrap-btn">
-                                    <a href="#" class="function-link">quick view</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker [White]</span></a>
-                                <div class="wrap-price"><ins><p class="product-price">$168.00</p></ins> <del><p class="product-price">$250.00</p></del></div>
-                            </div>
-                        </div>
-
-                        <div class="product product-style-2 equal-elem ">
-                            <div class="product-thumnail">
-                                <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
-                                    <figure><img src="{{ asset('assets/images/products/digital_01.jpg')}}" width="214" height="214" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
-                                </a>
-                                <div class="group-flash">
-                                    <span class="flash-item bestseller-label">Bestseller</span>
-                                </div>
-                                <div class="wrap-btn">
-                                    <a href="#" class="function-link">quick view</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker [White]</span></a>
-                                <div class="wrap-price"><span class="product-price">$250.00</span></div>
-                            </div>
-                        </div>
-
-                        <div class="product product-style-2 equal-elem ">
-                            <div class="product-thumnail">
-                                <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
-                                    <figure><img src="{{ asset('assets/images/products/digital_21.jpg')}}" width="214" height="214" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
-                                </a>
-                                <div class="wrap-btn">
-                                    <a href="#" class="function-link">quick view</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker [White]</span></a>
-                                <div class="wrap-price"><span class="product-price">$250.00</span></div>
-                            </div>
-                        </div>
-
-                        <div class="product product-style-2 equal-elem ">
-                            <div class="product-thumnail">
-                                <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
-                                    <figure><img src="{{ asset('assets/images/products/digital_03.jpg')}}" width="214" height="214" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
-                                </a>
-                                <div class="group-flash">
-                                    <span class="flash-item sale-label">sale</span>
-                                </div>
-                                <div class="wrap-btn">
-                                    <a href="#" class="function-link">quick view</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker [White]</span></a>
-                                <div class="wrap-price"><ins><p class="product-price">$168.00</p></ins> <del><p class="product-price">$250.00</p></del></div>
-                            </div>
-                        </div>
-
-                        <div class="product product-style-2 equal-elem ">
-                            <div class="product-thumnail">
-                                <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
-                                    <figure><img src="{{ asset('assets/images/products/digital_04.jpg')}}" width="214" height="214" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
-                                </a>
-                                <div class="group-flash">
-                                    <span class="flash-item new-label">new</span>
-                                </div>
-                                <div class="wrap-btn">
-                                    <a href="#" class="function-link">quick view</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker [White]</span></a>
-                                <div class="wrap-price"><span class="product-price">$250.00</span></div>
-                            </div>
-                        </div>
-
-                        <div class="product product-style-2 equal-elem ">
-                            <div class="product-thumnail">
-                                <a href="#" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
-                                    <figure><img src="{{ asset('assets/images/products/digital_05.jpg')}}" width="214" height="214" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
-                                </a>
-                                <div class="group-flash">
-                                    <span class="flash-item bestseller-label">Bestseller</span>
-                                </div>
-                                <div class="wrap-btn">
-                                    <a href="#" class="function-link">quick view</a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker [White]</span></a>
-                                <div class="wrap-price"><span class="product-price">$250.00</span></div>
+                                <a href="{{ route('product.details',['slug'=>$m_product->slug])  }}" class="product-name"><span>{{ $m_product->name }}"</span></a>
+                                <div class="wrap-price"><span class="product-price">Ksh{{ $m_product->regular_price  }}</span></div>
                             </div>
                         </div>
                     </div>
-                </div><!--End wrap-products-->
+                </div>
+                    @endforeach
+                <!--End wrap-products-->
             </div>
 
         </div><!--end main content area-->

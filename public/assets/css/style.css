@@ -720,7 +720,7 @@ li.menu-item .nav-label.sale-label::before{
 	background: transparent;
 }
 .header-style-1 .primary-nav-section{
-	background: #444444;
+	background: #ffffff;
 }
 .primary{
 	position: relative;
@@ -739,15 +739,15 @@ li.menu-item .nav-label.sale-label::before{
 }
 .primary>.menu-item:not(.home-icon)>a{
 	font-weight: 700;
-	color: #f1f1f1;
+	color: #080808;
 	text-transform: uppercase;
 	padding: 11px 23px;
 }
-.primary>.menu-item:not(first-child){
+/* .primary>.menu-item:not(first-child){
 	border-right: 1px solid #555555;
-}
+} */
 .primary>.menu-item:not(.home-icon):hover{
-	background: #555555;
+	background: #971616;
 }
 .primary .menu-item>a:focus,
 .primary .menu-item>a:active,
@@ -1033,26 +1033,26 @@ li.menu-item .nav-label.sale-label::before{
 .wrap-main-slide .slide-1 .f-title{
     font-size: 35px;
     line-height: 28.8px;
-    color: #555555;
+    color: #f3efef;
     text-transform: uppercase;
     font-weight: 400;
     margin-left: -2px;
 }
 .wrap-main-slide .slide-1 .f-title b{
-    color: #222222;
+    color: #f3efef;
     font-size: 45px;
     font-weight: 700;
 }
 .wrap-main-slide .slide-1 .subtitle{
     font-size: 18px;
     line-height: 24px;
-    color: #555555;
+    color: #f3efef;
     display: inline-block;
 }
 .wrap-main-slide .slide-1 .sale-info{
     font-size: 16px;
     line-height: 24px;
-    color: #888888;
+    color: #f3efef;
     margin-top: 6px;
     margin-bottom: 19px;
 }
@@ -1565,6 +1565,7 @@ li.menu-item .nav-label.sale-label::before{
     margin-left: 10px;
 }
 .wrap-show-advance-info-box{
+    flex-direction: column;
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -4750,7 +4751,7 @@ table.shop_attributes tbody{
     margin-top: 29px;
 }
 .wrap-product-detail .detail-info .wrap-social{
-    margin-top: 45px;
+    margin-top: 55px;
 }
 .wrap-product-detail .detail-info .stock-info{
     margin-bottom: 11px;
@@ -7201,4 +7202,14 @@ svg{
 
 .wrap-pagination-info .rounded-r-md{
     margin-left: 5px;
+}
+.footer-address-map-link{
+    height: 90%;
+    width: 80%;
+}
+.mpesa{
+    padding-right: 10px;
+    height:60px ;
+    width: 100px;
+    padding-bottom: 26px;
 }

@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/flexslider.css' )}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css') }}">
@@ -49,32 +50,7 @@
                         </div>
                         <div class="topbar-menu right-menu">
                             <ul>
-                                {{-- <li class="menu-item" ><a title="Register or Login" href="login.html">Login</a></li>
-								<li class="menu-item" ><a title="Register or Login" href="register.html">Register</a></li> --}}
-                                {{-- <li class="menu-item lang-menu menu-item-has-children parent">
-									<a title="English" href="#"><span class="img label-before"><img src="{{asset('assets/images/lang-en.png')}}" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                </li> --}}
-                                {{-- <ul class="submenu lang" >
-										<li class="menu-item" ><a title="hungary" href="#"><span class="img label-before"><img src="{{asset('assets/images/lang-hun.png')}}" alt="lang-hun"></span>Hungary</a></li>
-										<li class="menu-item" ><a title="german" href="#"><span class="img label-before"><img src="{{asset('assets/images/lang-ger.png')}}" alt="lang-ger" ></span>German</a></li>
-										<li class="menu-item" ><a title="french" href="#"><span class="img label-before"><img src="{{asset('assets/images/lang-fra.png')}}" alt="lang-fre"></span>French</a></li>
-										<li class="menu-item" ><a title="canada" href="#"><span class="img label-before"><img src="{{asset('assets/images/lang-can.png')}}" alt="lang-can"></span>Canada</a></li>
-									</ul>
-								</li>
-								<li class="menu-item menu-item-has-children parent" >
-									<a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-									<ul class="submenu curency" >
-										<li class="menu-item" >
-											<a title="Pound (GBP)" href="#">Pound (GBP)</a>
-										</li>
-										<li class="menu-item" >
-											<a title="Euro (EUR)" href="#">Euro (EUR)</a>
-										</li>
-										<li class="menu-item" >
-											<a title="Dollar (USD)" href="#">Dollar (USD)</a>
-										</li>
-									</ul>
-								</li> --}}
+    
                                 @if (Route::has('login'))
                                     @auth
                                         {{-- admin dashboard --}}
@@ -189,10 +165,12 @@
                                     </a>
                                 </div>
                                 <div class="wrap-icon-section minicart">
-                                    <a href="#" class="link-direction">
+                                    <a href="/cart" class="link-direction">
                                         <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                                         <div class="left-info">
-                                            <span class="index">4 items</span>
+                                            @if(Cart::count() > 0)
+                                            <span class="index">{{ Cart::count() }} items</span>
+                                            @endif
                                             <span class="title">CART</span>
                                         </div>
                                     </a>
@@ -231,9 +209,8 @@
                         <div class="primary-nav-section">
                             <div class="container">
                                 <ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu">
-                                    <li class="menu-item home-icon">
-                                        <a href="/home" class="link-term mercado-item-title"><i class="fa fa-home"
-                                                aria-hidden="true"></i></a>
+                                    <li class="menu-item">
+                                        <a href="/" class="link-term mercado-item-title">Home</a>
                                     </li>
                                     <li class="menu-item">
                                         <a href="/shop" class="link-term mercado-item-title">Shop</a>
@@ -283,7 +260,7 @@
 
                             </li>
                             <li class="fc-info-item">
-                                <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                               <img class="mpesa" src="{{ asset ('assets/images/mpesa.jpeg')}}" alt="">
                                 <div class="wrap-left-info">
                                     <h4 class="fc-name">Safe Payment</h4>
                                     <p class="fc-desc">Safe your online payment</p>
@@ -410,10 +387,12 @@
 
                             <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
                                 <div class="wrap-footer-item">
-                                    <h3 class="item-header">We Using Safe Payments:</h3>
+                                    <h3 class="item-header">Find us on map</h3>
+                                   
                                     <div class="item-content">
-                                        <div class="wrap-list-item wrap-gallery">
-                                            <img src="assets/images/payment.png" style="max-width: 260px;">
+                                        <div class="column">
+                                            <iframe class="footer-address-map-link" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3988.817436287325!2d36.8289!3d-1.2834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f112960ead4e7%3A0xb9e7df27c038dd24!2sLuthuli%20Ave%20%26%20River%20Road%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1677137431049!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                     
                                         </div>
                                     </div>
                                 </div>
@@ -424,11 +403,11 @@
                                     <h3 class="item-header">Social network</h3>
                                     <div class="item-content">
                                         <div class="wrap-list-item social-network">
-                                            <ul>
+                                            <ul> 
+                                                <li><a href="https://m.facebook.com/100063569091663" class="link-to-item" title="facebook"><i
+                                                            class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                                 <li><a href="#" class="link-to-item" title="twitter"><i
                                                             class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                                <li><a href="#" class="link-to-item" title="facebook"><i
-                                                            class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                                 <li><a href="#" class="link-to-item" title="pinterest"><i
                                                             class="fa fa-pinterest" aria-hidden="true"></i></a></li>
                                                 <li><a href="#" class="link-to-item" title="instagram"><i
@@ -444,7 +423,7 @@
                         </div>
                     </div>
 
-                    <div class="wrap-back-link">
+                    {{-- <div class="wrap-back-link">
                         <div class="container">
                             <div class="back-link-box">
                                 <h3 class="backlink-title">Quick Links</h3>
@@ -563,14 +542,16 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
-
+               
+                            
+                
                 <div class="coppy-right-box">
                     <div class="container">
                         <div class="coppy-right-item item-left">
-                            <p class="coppy-right-text">Copyright © 2023 Jamo Audio Empire. All rights reserved</p>
+                            <p class="coppy-right-text">Copyright © 2023-<script>document.write(new Date().getFullYear())</script>Jamo Audio Empire. All rights reserved</p>
                         </div>
                         <div class="coppy-right-item item-right">
                             <div class="wrap-nav horizontal-nav">
@@ -601,6 +582,15 @@
         <script src="{{ asset('assets/js/jquery.sticky.js') }}"></script>
         <script src="{{ asset('assets/js/functions.js') }}"></script>
         @livewireScripts
+        <script> 
+            let docTitle = document.title;
+            window.addEventListener("blur",()=>{
+              document.title = "Jamo Audio Empire ";
+            });
+            window.addEventListener("focus",()=>{
+              document.title = docTitle;
+            });
+            </script>
     </body>
 
     </html>
