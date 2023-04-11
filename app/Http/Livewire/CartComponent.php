@@ -7,19 +7,32 @@ use Livewire\Component;
 use Cart;
 class CartComponent extends Component
 {
-    public function addQuantity($rowId)
+    public function increaseQuantity($rowId)
     {
         $product = Cart::get($rowId);
-        $quantity = $product->quantity +1;
+        $quantity = $product->quantity + 1;
         Cart::update($rowId,$quantity);
     }
 
-    public function reduceQuantity($rowId){
+    public function decreaseQuantity($rowId)
+    {
         $product = Cart::get($rowId);
-        $quantity = $product->quantity -1;
+        $quantity = $product->quantity - 1;
         Cart::update($rowId,$quantity);
     }
     
+    public function destroy($rowId)
+    {
+        Cart::remove($rowId);
+        session()->flash('success_message','Product has been removed');
+        return redirect()->route('product.cart');
+    }
+
+    public function destroyAll()
+    {
+        Cart::destroy();
+    }
+
     public function render()
     {
         $products = Product::first();

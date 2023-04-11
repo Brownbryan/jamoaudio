@@ -429,55 +429,6 @@
                                 <h3 class="backlink-title">Quick Links</h3>
                                 <div class="back-link-row">
 
-                                      <ul class="list-back-link">
-                                        <li><span class="row-title">Guitars:</span></li>
-                                        <li><a href="#" class="redirect-back-link" title="Plesc YPads">Acoustic Guitars</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Samsyng Tablets">Semi Acoustic Guitars</a></li>
-                                        <li><a href="#" class="redirect-back-link"
-                                                title="Qindows Tablets">Classical Guitars</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Calling Tablets">Trans Acoustic Guitar</a></li>
-                                        <li><a href="#" class="redirect-back-link"
-                                                title="Micrumex Tablets">Electric Guitars</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Lenova Tablets Bsus">Bass Guitar</a></li>
-
-                                    </ul>
-
-                                    <ul class="list-back-link">
-                                        <li><span class="row-title">Keyboards:</span></li>
-                                        <li><a href="#" class="redirect-back-link" title="mobile">Arranger
-                                                Workstation</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="yphones">Synthesizers</a>
-                                        </li>
-                                        <li><a href="#" class="redirect-back-link" title="Gianee Mobiles GL">Midi
-                                                Keyboard</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Mobiles Karbonn">Portable Keyboard</a></li>
-                                        <li><a href="#" class="redirect-back-link"
-                                                title="Mobiles Viva">Piaggero</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Mobiles Intex">Keyboad
-                                                accessories</a>
-                                        <li>
-                                        <li><a href="#" class="redirect-back-link" title="Mobiles Viva">Keyboard
-                                                Stand</a></li>
-
-                                        </li>
-                                        </li>
-                                    </ul>
-
-                                    <ul class="list-back-link">
-                                        <li><span class="row-title">Piano:</span></li>
-                                        <li><a href="#" class="redirect-back-link" title="Plesc YPads">Grand
-                                                Piano</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Samsyng Tablets">Upright
-                                                Piano</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Qindows Tablets">Digital
-                                                Piano</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Calling Tablets">Piano
-                                                Accesories</a></li>
-
-                                    </ul>
-
-                                  
-
                                     <ul class="list-back-link">
                                         <li><span class="row-title">Dj Equipment:</span></li>
                                         <li><a href="#" class="redirect-back-link" title="Sarees Silk">Dj
@@ -495,58 +446,16 @@
                                         <li><a href="#" class="redirect-back-link" title="Loose Diamond Shoes">Dj
                                                 Accessories</a></li>
 
-                                    </ul>
-                                    <ul class="list-back-link">
-                                        <li><span class="row-title">PA Equipment:</span></li>
-                                        <li><a href="#" class="redirect-back-link"
-                                                title="Sarees Silk">Amplifier</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="sarees Salwar">Line Array
-                                                System</a></li>
-                                        <li><a href="#" class="redirect-back-link"
-                                                title="Suits Lehengas">Speakers</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Biba Jewellery">Signal
-                                                Processors</a></li>
-                                        <li><a href="#" class="redirect-back-link"
-                                                title="Rings Earrings">Mixers</a></li>
-
-                                    </ul>
-                                  
-                                    <ul class="list-back-link">
-                                        <li><span class="row-title">Music Production:</span></li>
-                                        <li><a href="#" class="redirect-back-link"
-                                                title="Sarees Silk">Earphones/Headphones</a></li>
-                                        <li><a href="#" class="redirect-back-link"
-                                                title="sarees Salwar">Condenser</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Suits Lehengas">Studio
-                                                Monitors</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Biba Jewellery">Audio
-                                                Monitors</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Rings Earrings">Midi
-                                                Keyboards</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Diamond Rings">Audio
-                                                Interfaces</a></li>
-
-                                    </ul>  
-                                    <ul class="list-back-link">
-                                        <li><span class="row-title">Drums:</span></li>
-                                        <li><a href="#" class="redirect-back-link" title="Sarees Silk">Acoustic
-                                                Drums</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="sarees Salwar"> Electric
-                                                Drums</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Suits Lehengas">Drum
-                                                Accessories</a></li>
-
-                                    </ul>
 
 
                                 </div>
                             </div>
                         </div>
-                    </div> --}}
+                    </div> 
 
                 </div>
                
-                            
+                             --}}
                 
                 <div class="coppy-right-box">
                     <div class="container">

@@ -376,10 +376,10 @@
             <div class="wrap-products">
                 <div class="wrap-product-tab tab-style-1">
                     <div class="tab-control">
-                        <a href="#fashion_1a" class="tab-control-item active">Smartphone</a>
-                        <a href="#fashion_1b" class="tab-control-item">Watch</a>
-                        <a href="#fashion_1c" class="tab-control-item">Laptop</a>
-                        <a href="#fashion_1d" class="tab-control-item">Tablet</a>
+                        <a href="#fashion_1a" class="tab-control-item active">Quitars</a>
+                        <a href="#fashion_1b" class="tab-control-item">Keyboards</a>
+                        <a href="#fashion_1c" class="tab-control-item">Piano</a>
+                        <a href="#fashion_1d" class="tab-control-item">Pa Equipment</a>
                     </div>
                     <div class="tab-contents">
 
