@@ -412,7 +412,6 @@
                                                             class="fa fa-pinterest" aria-hidden="true"></i></a></li>
                                                 <li><a href="#" class="link-to-item" title="instagram"><i
                                                             class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                                {{-- <li><a href="#" class="link-to-item" title="vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li> --}}
                                             </ul>
                                         </div>
                                     </div>
@@ -423,40 +422,7 @@
                         </div>
                     </div>
 
-                    {{-- <div class="wrap-back-link">
-                        <div class="container">
-                            <div class="back-link-box">
-                                <h3 class="backlink-title">Quick Links</h3>
-                                <div class="back-link-row">
-
-                                    <ul class="list-back-link">
-                                        <li><span class="row-title">Dj Equipment:</span></li>
-                                        <li><a href="#" class="redirect-back-link" title="Sarees Silk">Dj
-                                                Monitors</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="sarees Salwar">Turn
-                                                Tables</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Suits Lehengas">
-                                                Controllers</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Biba Jewellery"> Dj
-                                                Mixers</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Rings Earrings">CD
-                                                Players</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Diamond Rings">All In one
-                                                Dj System</a></li>
-                                        <li><a href="#" class="redirect-back-link" title="Loose Diamond Shoes">Dj
-                                                Accessories</a></li>
-
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-
                 </div>
-               
-                             --}}
-                
                 <div class="coppy-right-box">
                     <div class="container">
                         <div class="coppy-right-item item-left">
